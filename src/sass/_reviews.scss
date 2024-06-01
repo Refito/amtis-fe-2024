@@ -1,0 +1,51 @@
+#reviews {
+    .reviews-container {
+        max-width: $maxWidth;
+        margin: 0 auto;
+        padding: 0 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .title {
+        font-family: "Noto Serif", sans-serif;
+        font-weight: 700;
+        font-size: 3.5rem;
+        max-width: 15ch;
+    }
+
+    .decor {
+        margin: 3rem 0;
+    }
+
+    .entry {
+        margin-bottom: 2rem;
+    }
+
+    .author {
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .text {
+        line-height: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: $phoneSize) {
+    #reviews {
+        .reviews-container {
+            grid-template-columns: 1fr;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+    }
+}

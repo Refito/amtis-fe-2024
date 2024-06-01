@@ -1,0 +1,52 @@
+#chef {
+    .chef-container {
+        max-width: $maxWidth;
+        margin: 0 auto;
+        margin-bottom: 6rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        & > div {
+            align-self: center;
+        }
+    }
+
+    .image-container {
+        justify-self: end;
+    }
+
+    .information {
+        grid-column: 2/4;
+        padding: 0 4rem;
+        max-width: 85ch;
+    }
+
+    .name {
+        font-family: "Noto Serif", sans-serif;
+        font-weight: 700;
+        font-size: 4rem;
+        max-width: 5rem;
+    }
+
+    .bio {
+        line-height: 1.5rem;
+    }
+
+    .decor {
+        margin: 2rem 0;
+    }
+}
+
+@media only screen and (max-width: $phoneSize) {
+    #chef {
+        .chef-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .name {
+            margin-top: 2rem;
+            font-size: 2rem;
+        }
+    }
+}

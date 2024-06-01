@@ -1,0 +1,62 @@
+#landing {
+    .landing-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: $maxWidth;
+        margin: auto;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .title {
+        color: $main;
+        font-family: "Noto Serif", sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
+        max-width: 30ch;
+        padding: 4rem 0;
+
+        .highlight {
+            color: $textHighlight;
+        }
+    }
+
+    .description {
+        color: $textDescription;
+        max-width: 70ch;
+        margin: 0 auto;
+    }
+
+    .buttons {
+        margin-top: 4rem;
+
+        button {
+            font-weight: 600;
+            border: 1px solid;
+            border-radius: 15px;
+            padding: 0.5rem 1rem;
+            margin: 0 0.3rem;
+        }
+
+        .primary {
+            background-color: $main;
+            border-color: $main;
+            color: $white;
+        }
+
+        .secondary {
+            color: $buttonSecondary;
+            border-color: $buttonSecondary;
+        }
+    }
+}
+
+@media only screen and (max-width: $phoneSize) {
+    #landing {
+        .title {
+            font-size: 2rem;
+        }
+    }
+}

@@ -1,1 +1,50 @@
 // Продължи с твоя SCSS или обикновен CSS код тук.
+@import "./variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $background;
+}
+
+#app {
+    overflow-y: hidden;
+}
+
+a,
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+.links > li {
+    cursor: pointer;
+}
+
+.back-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+}
+
+@media only screen and (max-width: $phoneSize) {
+    .back-logo {
+        display: none;
+    }
+}
+
+@import "./nav";
+@import "./landing";
+@import "./products";
+@import "./chef";
+@import "./desserts";
+@import "./reviews";
+@import "./contact";
+@import "./media";
+@import "./footer";

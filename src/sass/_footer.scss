@@ -1,0 +1,84 @@
+footer {
+    .footer-container {
+        position: relative;
+        padding: 4rem 0;
+        max-width: $maxWidth;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .walnuts-container {
+        width: 6rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .contacts {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 2rem 0;
+        display: flex;
+
+        .contact {
+            margin: 0 0.5rem;
+        }
+    }
+
+    .links {
+        display: flex;
+        list-style-type: none;
+        color: $textDescription;
+        font-weight: 600;
+
+        & > li {
+            padding: 0 1rem;
+        }
+    }
+
+    .copyright {
+        margin-top: 1rem;
+        display: flex;
+        font-size: 0.8rem;
+        color: $textMacroName;
+
+        & > * {
+            margin: 0.2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: $phoneSize) {
+    footer {
+        .contacts {
+            flex-direction: column;
+
+            .contact {
+                margin-top: 0.8rem;
+            }
+        }
+
+        .links {
+            flex-direction: column;
+            text-align: center;
+
+            li {
+                padding: 0.5rem 0;
+            }
+        }
+
+        .copyright {
+            flex-direction: column;
+            align-items: center;
+
+            & > *:nth-child(even) {
+                display: none;
+            }
+        }
+    }
+}

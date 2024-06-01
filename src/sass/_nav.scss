@@ -1,0 +1,61 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    max-width: $maxWidth;
+    margin: auto;
+
+    .links {
+        display: flex;
+        list-style-type: none;
+        color: $main;
+        font-weight: 600;
+
+        & > li {
+            padding: 0 1rem;
+        }
+    }
+
+    .burger {
+        display: none;
+        gap: 0.3rem;
+    }
+
+    .slice {
+        height: 0.2rem;
+        width: 2rem;
+        background-color: $buttonSecondary;
+    }
+}
+
+@media only screen and (max-width: $phoneSize) {
+    .nav-container {
+        justify-content: space-between;
+        position: relative;
+
+        .links {
+            background-color: $background;
+            opacity: 1;
+            position: absolute;
+            top: 4rem;
+            right: 100%;
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                padding: 1rem 0;
+            }
+
+            &.active {
+                left: 0;
+                right: 0;
+            }
+        }
+
+        .burger {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

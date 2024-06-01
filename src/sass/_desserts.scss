@@ -1,0 +1,137 @@
+#desserts {
+    .desserts-container {
+        max-width: $maxWidth;
+        margin: 0 auto;
+        margin-bottom: 6rem;
+
+        background-color: $productBackground;
+        border-radius: 15px;
+        padding: 1rem 0;
+    }
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+            font-family: "Noto Serif", sans-serif;
+            font-weight: 700;
+            font-size: 4rem;
+        }
+
+        .decor {
+            margin: 0.5rem 0;
+        }
+    }
+
+    .item {
+        display: grid;
+        grid-template-columns: 25% 40% 1fr;
+        gap: 3rem;
+        padding: 3rem 1.5rem;
+        margin: 2rem;
+        background-color: $itemBackround;
+        border-radius: 20px;
+        align-items: center;
+    }
+
+    .name {
+        font-family: "Noto Serif", sans-serif;
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    .extra {
+        text-transform: uppercase;
+    }
+
+    .description,
+    .ingredients {
+        color: $textDescription;
+    }
+
+    .ingredients {
+        margin-top: 1rem;
+
+        .highlight {
+            font-weight: 600;
+            color: $black;
+        }
+    }
+
+    .image-container {
+        img {
+            width: 100%;
+        }
+    }
+
+    .macros {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: $macrosBackround;
+        border-radius: 15px;
+        padding: 4rem 2rem;
+        gap: 1rem;
+
+        .macro-name {
+            text-transform: uppercase;
+            color: $textMacroName;
+        }
+
+        .value {
+            font-family: "Noto Serif", sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+    }
+
+    .order {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $orderBackground;
+        padding: 2rem;
+        margin: 0 2rem;
+        border-radius: 10px;
+
+        .inquire {
+            flex: 1;
+            max-width: 100ch;
+        }
+
+        .action {
+            font-weight: 600;
+            border: 1px solid;
+            border-radius: 15px;
+            padding: 0.5rem 1rem;
+            margin: 0 0.3rem;
+            background-color: $main;
+            border-color: $main;
+            color: $white;
+        }
+    }
+}
+
+@media only screen and (max-width: $phoneSize) {
+    #desserts {
+        .item {
+            grid-template-columns: 1fr;
+        }
+
+        .order {
+            flex-direction: column;
+
+            .action {
+                margin-top: 2rem;
+            }
+        }
+
+        .name {
+            font-size: 2rem;
+        }
+    }
+}
