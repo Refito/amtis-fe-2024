@@ -500,6 +500,7 @@ button {
 }
 #contact .form textarea {
   width: 30rem;
+  resize: none;
 }
 #contact .submit {
   font-weight: 600;
