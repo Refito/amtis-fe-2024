@@ -126,17 +126,12 @@ formBtn.addEventListener("click", async (e) => {
     const request = formData.get("question/request");
     const data = { name, phone, email, request };
 
-    fetch("http://localhost:4000/form_submissions", {
+    await fetch("http://localhost:4000/form_submissions", {
         method: "POST",
+        mode: "no-cors",
         headers: {
             "Context-Type": "application/json",
         },
         body: JSON.stringify(data),
-    })
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data);
-            e.preventDefault();
-        })
-        .catch((err) => console.log(err));
+    });
 });
